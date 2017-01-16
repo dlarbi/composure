@@ -42,8 +42,8 @@ class ComposureApp extends React.Component {
             width={200}
             open={this.state.ui.mainMenuOpen}
             onRequestChange={(open) => this.setState({open})}>
-            <Link to={`calendar`}><MenuItem onTouchTap={this.handleClose}>Calendar</MenuItem></Link>
-            <Link to={`recipes`}><MenuItem onTouchTap={this.handleClose}>Recipes</MenuItem></Link>
+            <Link to={`/users/${this.props.params.user_id}/calendar`}><MenuItem onTouchTap={this.handleClose}>Calendar</MenuItem></Link>
+            <Link to={`/users/${this.props.params.user_id}/recipes`}><MenuItem onTouchTap={this.handleClose}>Recipes</MenuItem></Link>
           </Drawer>
           {this.props.children}
         </div>

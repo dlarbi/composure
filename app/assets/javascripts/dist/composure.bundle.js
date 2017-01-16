@@ -78,9 +78,9 @@
 	    { history: _reactRouter.browserHistory },
 	    _react2.default.createElement(
 	      _reactRouter.Route,
-	      { path: '/', component: _ComposureApp.ComposureApp },
-	      _react2.default.createElement(_reactRouter.Route, { path: 'recipes', component: _RecipesDashboard.RecipesDashboard }),
-	      _react2.default.createElement(_reactRouter.Route, { path: 'calendar', component: _CalendarDashboard.CalendarDashboard })
+	      { path: '/users/:user_id', component: _ComposureApp.ComposureApp },
+	      _react2.default.createElement(_reactRouter.Route, { path: '/users/:user_id/recipes', component: _RecipesDashboard.RecipesDashboard }),
+	      _react2.default.createElement(_reactRouter.Route, { path: '/users/:user_id/calendar', component: _CalendarDashboard.CalendarDashboard })
 	    )
 	  ), document.getElementById("composure-app"));
 	});
@@ -27268,7 +27268,7 @@
 	              } },
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: 'calendar' },
+	              { to: '/users/' + this.props.params.user_id + '/calendar' },
 	              _react2.default.createElement(
 	                _MenuItem2.default,
 	                { onTouchTap: this.handleClose },
@@ -27277,7 +27277,7 @@
 	            ),
 	            _react2.default.createElement(
 	              _reactRouter.Link,
-	              { to: 'recipes' },
+	              { to: '/users/' + this.props.params.user_id + '/recipes' },
 	              _react2.default.createElement(
 	                _MenuItem2.default,
 	                { onTouchTap: this.handleClose },

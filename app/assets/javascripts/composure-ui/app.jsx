@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   render((
     <Router history={browserHistory}>
-      <Route path="/" component={ComposureApp}>
-        <Route path="recipes" component={RecipesDashboard}>
+      <Route path="/users/:user_id" component={ComposureApp}>
+        <Route path="/users/:user_id/recipes" component={RecipesDashboard}>
         </Route>
-        <Route path="calendar" component={CalendarDashboard}>
+        <Route path="/users/:user_id/calendar" component={CalendarDashboard}>
         </Route>
       </Route>
     </Router>
